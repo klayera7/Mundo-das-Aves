@@ -112,8 +112,29 @@ body {
     width: 360px;
     overflow-y: auto;
     padding-right: 8px;
-    border-left: 2px solid #a8b07e;
+    border-left: 4px solid #a8b07e;
     cursor: pointer;
+}
+
+.animais-lista li {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.animais-lista li img {
+    transition: transform 0.5s ease, filter 0.5s ease;
+    display: block;
+    width: 100%;
+}
+
+.animais-lista li:hover {
+    transform: translateX(4px);
+}
+
+.animais-lista li:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.2);
 }
 
 .animais-lista::-webkit-scrollbar {
@@ -202,4 +223,32 @@ body {
     text-align: center;
     font-weight: bold;
     color: #4e342e;
+}
+
+/* JavaScript */
+
+.js .js-tabinfo section {
+    display: none;
+}
+
+.js-tabinfo section.ativo {
+    display: block;
+    animation: show 0.6s ease-out forwards;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: translate3d(-30px, 0, 0);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(-4px, 0, 0); 
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
 }
