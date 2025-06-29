@@ -1,3 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#faq {
+    scroll-margin-top: 180px;
+}
+
 body, h1, h2, ul, li, p, dd, dt, dl {
     margin: 0;
     padding: 0;
@@ -251,4 +259,54 @@ body {
         opacity: 1;
         transform: translate3d(0, 0, 0);
     }
+}
+
+.js .js-accordion {
+    cursor: pointer;
+    user-select: none;
+}
+
+.js .js-accordion dd {
+    display: none;
+}
+
+.js-accordion dt::after {
+    content: '⬎';
+    margin-left: 4px;
+}
+
+.js-accordion dt.ativo::after {
+    content: '⬏';
+}
+
+.js .js-accordion dd.ativo {
+    display: block;
+    animation: slideDown 0.6s ease forwards;
+    overflow: hidden;
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px) scaleY(0.95);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(5px) scaleY(1.02);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scaleY(1);
+    }
+}
+
+.js .js-scroll {
+    opacity: 0;
+    transform: translate3d(-30px, 0px, 0px);
+    transition: 0.6s;
+}
+
+.js .js-scroll.ativo {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
 }
