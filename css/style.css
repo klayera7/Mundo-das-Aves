@@ -31,8 +31,7 @@ body {
 
 .menu {
     grid-column: 1 / 5;
-
-    background: url("/img/fundonav.png") repeat;
+    background: url("../img/fundonav.png") repeat;
     background-position:  center -10px;
     background-size: cover;
     box-shadow: 0px 2px 6px #222222cc;
