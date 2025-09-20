@@ -32,9 +32,12 @@ body {
     background-color: #F6F6F6;
     color: #222;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.grid-container {
     display: grid;
     grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
-    line-height: 1.6;
 }
 
 .menu {
@@ -42,7 +45,7 @@ body {
     background: url("../img/fundonav.png") repeat;
     background-position: center -10px;
     background-size: cover;
-    box-shadow: 0px 2px 6px #222222cc;
+    box-shadow: 2px 2px 6px #222222cc;
 }
 
 .menu ul {
@@ -67,7 +70,7 @@ body {
     background: none;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     letter-spacing: 0.08em;
     border-radius: 4px;
     position: relative;
@@ -263,10 +266,113 @@ body {
     color: #4e342e;
 }
 
+.modal-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0,.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-container.ativo {
+    display: flex;
+}
+
+.modal {
+    background-color: white;
+    padding: 100px;
+    border: 10px solid #5d4037;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #c0d06f;
+    position: relative;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -30px, 0);
+    }
+    to {
+        opacity: 1;
+                transform: translate3d(0, 0, 0);
+    }
+}
+
+.ativo .modal {
+    animation: modal 0.5s ease-out forwards;
+}
+
+.fechar {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.3);
+    border: none;
+    cursor: pointer;
+    background: #4e342e;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modal label {
+    font-family: 'Playfair Display SC', serif;
+    display: block;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin: 1rem 0 .5rem 0;
+}
+
+.modal input {
+    width: 100%;
+    padding: .8rem 1rem;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.modal input:focus {
+    outline: none;
+    border-color: #a8b07e;
+    box-shadow: 0 0 5px rgba(168, 176, 126, 0.6);
+}
+
+.modal button[type="submit"] {
+    margin-top: 1rem;
+    padding: .7rem 1.2rem;
+    background: #a8b07e;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-family: 'Playfair Display SC', serif;
+    font-weight: bold;
+    color: #4e342e;
+    cursor: pointer;
+    transition: background-color .5s ease;
+}
+
+.modal button[type="submit"]:hover {
+    background-color: #4e342e;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Medias para responsividade */
 
 @media (max-width: 768px) {
-    body {
+    .grid-container {
         grid-template-columns: 1fr;
     }
 
