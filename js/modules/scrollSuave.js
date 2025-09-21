@@ -8,7 +8,8 @@ export default function animeScroll() {
                 const sectionVisible = (sectionTop - windowMedida) < 0
                 if(sectionVisible) {
                     section.classList.add('ativo')
-                } else {
+                } 
+                else if(section.classList.contains('ativo')) {
                     section.classList.remove('ativo')
                 }
             })

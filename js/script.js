@@ -12,3 +12,6 @@ initModal();
 
 import initDropDownMenu from "./modules/dropDownMenu.js";
 initDropDownMenu();
+
+import initAnimacaoNumeros from "./modules/animacaoNumeros.js";
+initAnimacaoNumeros();
