@@ -9,3 +9,6 @@ faqAnimation();
 
 import initModal from "./modules/modal.js";
 initModal();
+
+import initDropDownMenu from "./modules/dropDownMenu.js";
+initDropDownMenu();
