@@ -19,7 +19,6 @@ export default function initAnimacaoNumeros() {
         });
     }
 
-    // Corrigido para receber um array de mutações
     function handleMutation(mutations) { 
         if (mutations[0].target.classList.contains('ativo')) {
             observer.disconnect();

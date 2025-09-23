@@ -15,3 +15,9 @@ initDropDownMenu();
 
 import initAnimacaoNumeros from "./modules/animacaoNumeros.js";
 initAnimacaoNumeros();
+
+import initFuncionamento from "./modules/funcionamento.js";
+initFuncionamento();
+
+import initBitcoin from "./modules/bitcoin.js";
+initBitcoin();

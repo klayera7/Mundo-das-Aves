@@ -266,6 +266,13 @@ body {
     padding-left: 28px;
 }
 
+.btc-preco {
+    background: #3f4;
+    padding: .2rem .5rem;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
 .dados li::before {
     content: '';
     position: absolute;
@@ -663,4 +670,26 @@ body {
 .js [data-anime="scroll"].ativo {
     opacity: 1;
     transform: translate3d(0px, 0px, 0px);
+}
+
+[data-semana]::after {
+    display: inline-block;
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: red;
+    border-radius: 50px;
+    margin-left: 4px;
+    border: 1px solid #000000cc;
+}
+
+[data-semana].aberto::after {
+    display: inline-block;
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #3f4;
+    border-radius: 50px;
+    margin-left: 4px;
+    border: 1px solid #000000cc;
 }
