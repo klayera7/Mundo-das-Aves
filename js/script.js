@@ -21,3 +21,9 @@ initFuncionamento();
 
 import initBitcoin from "./modules/bitcoin.js";
 initBitcoin();
+
+
+
+const frase = 'JavaScript';
+const newFrase = frase.replace(/J/, 'B')
+console.log(newFrase);
